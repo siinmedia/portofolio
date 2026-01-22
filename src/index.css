@@ -59,10 +59,10 @@
     /* Border width for neobrutalism */
     --border-width: 2px;
 
-    /* Shadow - retro offset style */
-    --shadow-brutal: 4px 4px 0 0 hsl(var(--navy));
+    /* Shadow - 3px solid style */
+    --shadow-brutal: 3px 3px 0 0 hsl(var(--navy));
     --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
-    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 5px 5px 0 0 hsl(var(--navy));
 
     /* Sidebar colors */
     --sidebar-background: 45 25% 96%;
@@ -109,9 +109,9 @@
     --navy: 45 15% 70%;
     --cream: 45 15% 85%;
     --cream-dark: 210 18% 22%;
-    --shadow-brutal: 4px 4px 0 0 hsl(var(--navy));
+    --shadow-brutal: 3px 3px 0 0 hsl(var(--navy));
     --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
-    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 5px 5px 0 0 hsl(var(--navy));
   }
 }
 
