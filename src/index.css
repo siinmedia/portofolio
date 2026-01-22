@@ -18,103 +18,100 @@
 
 @layer base {
   :root {
-    /* Retro Muted Color Palette */
-    --background: 42 33% 95%; /* Cream */
-    --foreground: 220 20% 15%; /* Dark charcoal */
+    /* New Color Palette - #8B3A3A, #C9A227, #2C3E50 */
+    --background: 45 25% 96%; /* Warm off-white */
+    --foreground: 210 29% 24%; /* Dark navy #2C3E50 */
 
-    --card: 45 30% 92%; /* Off-white warm */
-    --card-foreground: 220 20% 15%;
+    --card: 45 20% 94%;
+    --card-foreground: 210 29% 24%;
 
-    --popover: 45 30% 92%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 45 20% 94%;
+    --popover-foreground: 210 29% 24%;
 
-    --primary: 45 80% 45%; /* Mustard */
-    --primary-foreground: 220 20% 10%;
+    --primary: 46 70% 47%; /* Gold #C9A227 */
+    --primary-foreground: 210 29% 15%;
 
-    --secondary: 350 45% 35%; /* Maroon */
-    --secondary-foreground: 45 30% 95%;
+    --secondary: 0 41% 39%; /* Maroon #8B3A3A */
+    --secondary-foreground: 45 25% 96%;
 
-    --muted: 42 25% 88%;
-    --muted-foreground: 220 15% 40%;
+    --muted: 45 15% 90%;
+    --muted-foreground: 210 20% 40%;
 
-    --accent: 210 50% 30%; /* Navy */
-    --accent-foreground: 45 30% 95%;
+    --accent: 210 29% 24%; /* Navy #2C3E50 */
+    --accent-foreground: 45 25% 96%;
 
     --destructive: 0 65% 50%;
     --destructive-foreground: 45 30% 95%;
 
-    --border: 220 20% 15%; /* Dark border for neobrutalism */
-    --input: 220 20% 15%;
-    --ring: 45 80% 45%;
+    --border: 210 29% 24%;
+    --input: 210 29% 24%;
+    --ring: 46 70% 47%;
 
-    --radius: 0.125rem; /* Very small radius - retro */
+    --radius: 0.5rem; /* Added border radius */
 
-    /* Custom retro colors */
-    --olive: 80 30% 35%;
-    --olive-foreground: 45 30% 95%;
-    --cream: 42 33% 95%;
-    --cream-dark: 42 25% 88%;
-    --charcoal: 220 20% 15%;
-    --maroon: 350 45% 35%;
-    --navy: 210 50% 30%;
-    --mustard: 45 80% 45%;
-    --sage: 90 20% 45%;
+    /* Custom colors from palette */
+    --maroon: 0 41% 39%;
+    --gold: 46 70% 47%;
+    --navy: 210 29% 24%;
+    --cream: 45 25% 96%;
+    --cream-dark: 45 15% 90%;
 
     /* Border width for neobrutalism */
     --border-width: 2px;
 
     /* Shadow - retro offset style */
-    --shadow-brutal: 4px 4px 0 0 hsl(var(--charcoal));
-    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--charcoal));
-    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--charcoal));
+    --shadow-brutal: 4px 4px 0 0 hsl(var(--navy));
+    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--navy));
 
     /* Sidebar colors */
-    --sidebar-background: 42 33% 95%;
-    --sidebar-foreground: 220 20% 15%;
-    --sidebar-primary: 45 80% 45%;
-    --sidebar-primary-foreground: 220 20% 10%;
-    --sidebar-accent: 42 25% 88%;
-    --sidebar-accent-foreground: 220 20% 15%;
-    --sidebar-border: 220 20% 15%;
-    --sidebar-ring: 45 80% 45%;
+    --sidebar-background: 45 25% 96%;
+    --sidebar-foreground: 210 29% 24%;
+    --sidebar-primary: 46 70% 47%;
+    --sidebar-primary-foreground: 210 29% 15%;
+    --sidebar-accent: 45 15% 90%;
+    --sidebar-accent-foreground: 210 29% 24%;
+    --sidebar-border: 210 29% 24%;
+    --sidebar-ring: 46 70% 47%;
   }
 
   .dark {
-    --background: 220 20% 10%;
-    --foreground: 42 33% 92%;
+    --background: 210 25% 12%;
+    --foreground: 45 20% 90%;
 
-    --card: 220 18% 14%;
-    --card-foreground: 42 33% 92%;
+    --card: 210 22% 16%;
+    --card-foreground: 45 20% 90%;
 
-    --popover: 220 18% 14%;
-    --popover-foreground: 42 33% 92%;
+    --popover: 210 22% 16%;
+    --popover-foreground: 45 20% 90%;
 
-    --primary: 45 80% 50%;
-    --primary-foreground: 220 20% 10%;
+    --primary: 46 70% 52%;
+    --primary-foreground: 210 29% 12%;
 
-    --secondary: 350 40% 45%;
-    --secondary-foreground: 42 33% 95%;
+    --secondary: 0 38% 48%;
+    --secondary-foreground: 45 20% 95%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 42 20% 65%;
+    --muted: 210 18% 22%;
+    --muted-foreground: 45 15% 65%;
 
-    --accent: 210 45% 45%;
-    --accent-foreground: 42 33% 95%;
+    --accent: 210 25% 35%;
+    --accent-foreground: 45 20% 95%;
 
     --destructive: 0 60% 45%;
-    --destructive-foreground: 42 33% 95%;
+    --destructive-foreground: 45 20% 95%;
 
-    --border: 42 20% 75%;
-    --input: 42 20% 75%;
-    --ring: 45 80% 50%;
+    --border: 45 15% 70%;
+    --input: 45 15% 70%;
+    --ring: 46 70% 52%;
 
-    --olive: 80 25% 50%;
-    --cream: 42 20% 85%;
-    --cream-dark: 220 15% 20%;
-    --charcoal: 42 20% 75%;
-    --shadow-brutal: 4px 4px 0 0 hsl(var(--charcoal));
-    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--charcoal));
-    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--charcoal));
+    --maroon: 0 38% 48%;
+    --gold: 46 70% 52%;
+    --navy: 45 15% 70%;
+    --cream: 45 15% 85%;
+    --cream-dark: 210 18% 22%;
+    --shadow-brutal: 4px 4px 0 0 hsl(var(--navy));
+    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 6px 6px 0 0 hsl(var(--navy));
   }
 }
 
@@ -147,9 +144,9 @@
 @layer components {
   /* Neobrutalist Card */
   .brutal-card {
-    @apply bg-card border-2 border-foreground p-4;
+    @apply bg-card border-2 border-foreground p-4 rounded-lg;
     box-shadow: var(--shadow-brutal);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .brutal-card:hover {
@@ -159,9 +156,9 @@
 
   /* Neobrutalist Button */
   .brutal-btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-mono font-bold text-sm uppercase tracking-wider border-2 border-foreground bg-primary text-primary-foreground;
+    @apply inline-flex items-center justify-center px-6 py-3 font-mono font-bold text-sm uppercase tracking-wider border-2 border-foreground bg-primary text-primary-foreground rounded-md;
     box-shadow: var(--shadow-brutal);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .brutal-btn:hover {
@@ -207,7 +204,7 @@
 
   /* Tag/Badge style */
   .brutal-tag {
-    @apply inline-block px-3 py-1 text-xs font-mono uppercase tracking-wider border-2 border-foreground bg-muted;
+    @apply inline-block px-3 py-1 text-xs font-mono uppercase tracking-wider border-2 border-foreground bg-muted rounded-md;
   }
 }
 

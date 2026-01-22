@@ -51,19 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        olive: {
-          DEFAULT: "hsl(var(--olive))",
-          foreground: "hsl(var(--olive-foreground))",
-        },
         cream: {
           DEFAULT: "hsl(var(--cream))",
           dark: "hsl(var(--cream-dark))",
         },
-        charcoal: "hsl(var(--charcoal))",
         maroon: "hsl(var(--maroon))",
+        gold: "hsl(var(--gold))",
         navy: "hsl(var(--navy))",
-        mustard: "hsl(var(--mustard))",
-        sage: "hsl(var(--sage))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
