@@ -12,9 +12,9 @@ const experiences = [
         current: true,
         promoted: true,
         tasks: [
-          "Building landing pages for various business needs",
-          "System integration across platforms",
           "Developing multi-role CRM for customer management",
+          "Building internal business systems and landing pages",
+          "System integration across platforms",
           "IT support and maintenance",
         ],
         brands: ["CRM System", "Internal Inventory System", "Content Planning System"],
