@@ -1,117 +1,112 @@
-@import "@fontsource/space-mono/400.css";
-@import "@fontsource/space-mono/700.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* NEOBRUTALISM RETRO DESIGN SYSTEM
-   - Border tegas 2px
-   - Warna retro muted
-   - Era digital 90-2000an
-   - Tidak modern, tidak glassmorphism
+/* MODERN NEOBRUTALISM RETRO DESIGN SYSTEM
+   - Refined 1px borders
+   - 2px offset shadows
+   - Clean typography
+   - Mobile-first approach
 */
 
 @layer base {
   :root {
-    /* New Color Palette - #8B3A3A, #C9A227, #2C3E50 */
-    --background: 45 25% 96%; /* Warm off-white */
-    --foreground: 210 29% 24%; /* Dark navy #2C3E50 */
+    /* Color Palette - #8B3A3A, #C9A227, #2C3E50 */
+    --background: 40 30% 97%;
+    --foreground: 210 29% 24%;
 
-    --card: 45 20% 94%;
+    --card: 40 25% 95%;
     --card-foreground: 210 29% 24%;
 
-    --popover: 45 20% 94%;
+    --popover: 40 25% 95%;
     --popover-foreground: 210 29% 24%;
 
-    --primary: 46 70% 47%; /* Gold #C9A227 */
-    --primary-foreground: 210 29% 15%;
+    --primary: 46 70% 47%;
+    --primary-foreground: 210 29% 12%;
 
-    --secondary: 0 41% 39%; /* Maroon #8B3A3A */
-    --secondary-foreground: 45 25% 96%;
+    --secondary: 0 41% 39%;
+    --secondary-foreground: 40 30% 97%;
 
-    --muted: 45 15% 90%;
-    --muted-foreground: 210 20% 40%;
+    --muted: 40 20% 92%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 210 29% 24%; /* Navy #2C3E50 */
-    --accent-foreground: 45 25% 96%;
+    --accent: 210 29% 24%;
+    --accent-foreground: 40 30% 97%;
 
     --destructive: 0 65% 50%;
-    --destructive-foreground: 45 30% 95%;
+    --destructive-foreground: 40 30% 97%;
 
     --border: 210 29% 24%;
     --input: 210 29% 24%;
     --ring: 46 70% 47%;
 
-    --radius: 0.5rem; /* Added border radius */
+    --radius: 0.5rem;
 
-    /* Custom colors from palette */
+    /* Custom palette */
     --maroon: 0 41% 39%;
     --gold: 46 70% 47%;
     --navy: 210 29% 24%;
-    --cream: 45 25% 96%;
-    --cream-dark: 45 15% 90%;
+    --cream: 40 30% 97%;
+    --cream-dark: 40 20% 92%;
 
-    /* Border width for neobrutalism */
-    --border-width: 2px;
+    /* Refined 1px border */
+    --border-width: 1px;
 
-    /* Shadow - 3px solid style */
-    --shadow-brutal: 3px 3px 0 0 hsl(var(--navy));
-    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
-    --shadow-brutal-hover: 5px 5px 0 0 hsl(var(--navy));
+    /* 2px shadow for softer look */
+    --shadow-brutal: 2px 2px 0 0 hsl(var(--navy));
+    --shadow-brutal-sm: 1px 1px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 3px 3px 0 0 hsl(var(--navy));
 
-    /* Sidebar colors */
-    --sidebar-background: 45 25% 96%;
+    /* Sidebar */
+    --sidebar-background: 40 30% 97%;
     --sidebar-foreground: 210 29% 24%;
     --sidebar-primary: 46 70% 47%;
-    --sidebar-primary-foreground: 210 29% 15%;
-    --sidebar-accent: 45 15% 90%;
+    --sidebar-primary-foreground: 210 29% 12%;
+    --sidebar-accent: 40 20% 92%;
     --sidebar-accent-foreground: 210 29% 24%;
     --sidebar-border: 210 29% 24%;
     --sidebar-ring: 46 70% 47%;
   }
 
   .dark {
-    --background: 210 25% 12%;
-    --foreground: 45 20% 90%;
+    --background: 210 25% 10%;
+    --foreground: 40 20% 92%;
 
-    --card: 210 22% 16%;
-    --card-foreground: 45 20% 90%;
+    --card: 210 22% 14%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 210 22% 16%;
-    --popover-foreground: 45 20% 90%;
+    --popover: 210 22% 14%;
+    --popover-foreground: 40 20% 92%;
 
     --primary: 46 70% 52%;
-    --primary-foreground: 210 29% 12%;
+    --primary-foreground: 210 29% 10%;
 
     --secondary: 0 38% 48%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary-foreground: 40 20% 95%;
 
-    --muted: 210 18% 22%;
-    --muted-foreground: 45 15% 65%;
+    --muted: 210 18% 20%;
+    --muted-foreground: 40 15% 65%;
 
     --accent: 210 25% 35%;
-    --accent-foreground: 45 20% 95%;
+    --accent-foreground: 40 20% 95%;
 
     --destructive: 0 60% 45%;
-    --destructive-foreground: 45 20% 95%;
+    --destructive-foreground: 40 20% 95%;
 
-    --border: 45 15% 70%;
-    --input: 45 15% 70%;
+    --border: 40 15% 70%;
+    --input: 40 15% 70%;
     --ring: 46 70% 52%;
 
     --maroon: 0 38% 48%;
     --gold: 46 70% 52%;
-    --navy: 45 15% 70%;
-    --cream: 45 15% 85%;
-    --cream-dark: 210 18% 22%;
-    --shadow-brutal: 3px 3px 0 0 hsl(var(--navy));
-    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--navy));
-    --shadow-brutal-hover: 5px 5px 0 0 hsl(var(--navy));
+    --navy: 40 15% 70%;
+    --cream: 40 15% 85%;
+    --cream-dark: 210 18% 20%;
+    --shadow-brutal: 2px 2px 0 0 hsl(var(--navy));
+    --shadow-brutal-sm: 1px 1px 0 0 hsl(var(--navy));
+    --shadow-brutal-hover: 3px 3px 0 0 hsl(var(--navy));
   }
 }
 
@@ -125,49 +120,48 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "Inter", system-ui, sans-serif;
-    font-feature-settings: "ss01", "ss02";
+    @apply bg-background text-foreground antialiased;
+    font-family: "Sora", system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
     letter-spacing: -0.02em;
   }
 
   code, pre, .font-mono {
-    font-family: "Space Mono", monospace;
+    font-family: "JetBrains Mono", monospace;
   }
 }
 
 @layer components {
-  /* Neobrutalist Card */
+  /* Refined Card - 1px border, 2px shadow */
   .brutal-card {
-    @apply bg-card border-2 border-foreground p-4 rounded-lg;
+    @apply bg-card border border-foreground p-5 rounded-lg;
     box-shadow: var(--shadow-brutal);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .brutal-card:hover {
-    transform: translate(-2px, -2px);
+    transform: translate(-1px, -1px);
     box-shadow: var(--shadow-brutal-hover);
   }
 
-  /* Neobrutalist Button */
+  /* Refined Button */
   .brutal-btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-mono font-bold text-sm uppercase tracking-wider border-2 border-foreground bg-primary text-primary-foreground rounded-md;
+    @apply inline-flex items-center justify-center px-5 py-2.5 font-mono font-medium text-sm tracking-wide border border-foreground bg-primary text-primary-foreground rounded-md;
     box-shadow: var(--shadow-brutal);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .brutal-btn:hover {
-    transform: translate(-2px, -2px);
+    transform: translate(-1px, -1px);
     box-shadow: var(--shadow-brutal-hover);
   }
 
   .brutal-btn:active {
-    transform: translate(2px, 2px);
+    transform: translate(1px, 1px);
     box-shadow: var(--shadow-brutal-sm);
   }
 
@@ -185,26 +179,26 @@
 
   /* Section styling */
   .section-container {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-16 md:py-20;
   }
 
   .section-title {
-    @apply text-2xl md:text-3xl font-mono font-bold uppercase tracking-tight mb-8 pb-2 border-b-2 border-foreground inline-block;
+    @apply text-xl md:text-2xl font-mono font-semibold tracking-tight mb-6 pb-2 border-b border-foreground/40 inline-block;
   }
 
-  /* Grid for skills/cards */
+  /* Grid */
   .brutal-grid {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
   }
 
-  /* Retro link style */
+  /* Link style */
   .retro-link {
-    @apply font-mono text-accent underline underline-offset-4 decoration-2 hover:bg-accent hover:text-accent-foreground px-1 transition-colors duration-100;
+    @apply font-mono text-secondary underline underline-offset-4 decoration-1 hover:bg-secondary hover:text-secondary-foreground px-1 transition-colors duration-150;
   }
 
-  /* Tag/Badge style */
+  /* Tag style */
   .brutal-tag {
-    @apply inline-block px-3 py-1 text-xs font-mono uppercase tracking-wider border-2 border-foreground bg-muted rounded-md;
+    @apply inline-block px-2.5 py-1 text-xs font-mono tracking-wide border border-foreground bg-muted rounded-md;
   }
 }
 
@@ -214,7 +208,7 @@
   }
 
   .border-brutal {
-    border-width: 2px;
+    border-width: 1px;
     border-color: hsl(var(--foreground));
   }
 

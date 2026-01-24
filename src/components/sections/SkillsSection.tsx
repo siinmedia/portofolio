@@ -2,142 +2,111 @@ import { TrendingUp, Users, FileText, Search, Palette, Code, Link, Wrench } from
 
 const skills = [
   {
-    title: "Digital Marketing Strategy",
-    subtitle: "Strategi Digital Marketing",
-    description: "Data-driven campaigns that actually move the needle. From planning to execution, everything measured.",
-    descriptionId: "Campaign berbasis data yang benar-benar memberikan hasil. Dari perencanaan hingga eksekusi, semuanya terukur.",
+    title: "Digital Strategy",
+    description: "Data-driven campaigns that move the needle. From planning to execution, everything measured.",
     icon: TrendingUp,
-    accent: "secondary",
+    accent: "secondary" as const,
   },
   {
     title: "Social Media Growth",
-    subtitle: "Pertumbuhan Social Media",
-    description: "Organic reach, real engagement, genuine brand awareness. No shortcuts, just smart content strategy.",
-    descriptionId: "Jangkauan organik, engagement nyata, brand awareness yang genuine. Tanpa jalan pintas, murni strategi konten yang tepat.",
+    description: "Organic reach, real engagement, genuine brand awareness. Smart content strategy, no shortcuts.",
     icon: Users,
-    accent: "primary",
+    accent: "primary" as const,
   },
   {
-    title: "Content & Copywriting",
-    subtitle: "Konten & Copywriting",
-    description: "Words that convert. Content calendars that make sense. Research-backed, trend-aware writing.",
-    descriptionId: "Tulisan yang mengkonversi. Kalender konten yang masuk akal. Penulisan berbasis riset dan tren.",
+    title: "Content & Copy",
+    description: "Words that convert. Content calendars that work. Research-backed, trend-aware writing.",
     icon: FileText,
-    accent: "accent",
+    accent: "accent" as const,
   },
   {
     title: "SEO Optimization",
-    subtitle: "Optimasi SEO",
-    description: "Technical SEO, on-page optimization, content strategy for organic ranking. The whole package.",
-    descriptionId: "Technical SEO, optimasi on-page, strategi konten untuk ranking organik. Paket lengkap.",
+    description: "Technical SEO, on-page optimization, content strategy for organic ranking.",
     icon: Search,
-    accent: "secondary",
+    accent: "secondary" as const,
   },
   {
     title: "Visual Design",
-    subtitle: "Desain Visual",
-    description: "Brand-consistent graphics, social assets, promotional materials. Design that serves the message.",
-    descriptionId: "Grafis yang konsisten dengan brand, aset sosial media, materi promosi. Desain yang melayani pesan.",
+    description: "Brand-consistent graphics, social assets, promotional materials that serve the message.",
     icon: Palette,
-    accent: "primary",
+    accent: "primary" as const,
   },
   {
     title: "Web Development",
-    subtitle: "Pengembangan Web",
-    description: "PHP, landing pages, custom CRM systems. Built for real business needs, not just looks.",
-    descriptionId: "PHP, landing page, sistem CRM custom. Dibangun untuk kebutuhan bisnis nyata, bukan hanya tampilan.",
+    description: "PHP, landing pages, custom CRM systems. Built for real business needs.",
     icon: Code,
-    accent: "accent",
+    accent: "accent" as const,
   },
   {
     title: "System Integration",
-    subtitle: "Integrasi Sistem",
-    description: "Connecting tools and platforms for streamlined workflows. Making different systems talk to each other.",
-    descriptionId: "Menghubungkan tools dan platform untuk workflow yang efisien. Membuat berbagai sistem saling berkomunikasi.",
+    description: "Connecting tools and platforms for streamlined workflows across your business.",
     icon: Link,
-    accent: "secondary",
+    accent: "secondary" as const,
   },
   {
     title: "Technical Support",
-    subtitle: "Dukungan Teknis",
-    description: "Day-to-day troubleshooting, maintenance, and support. Keeping things running smoothly.",
-    descriptionId: "Troubleshooting harian, maintenance, dan dukungan. Menjaga semuanya berjalan lancar.",
+    description: "Day-to-day troubleshooting, maintenance, keeping things running smoothly.",
     icon: Wrench,
-    accent: "primary",
+    accent: "primary" as const,
   },
 ];
 
 const SkillsSection = () => {
+  const accentStyles = {
+    primary: "bg-primary text-primary-foreground",
+    secondary: "bg-secondary text-secondary-foreground", 
+    accent: "bg-accent text-accent-foreground",
+  };
+
   return (
-    <section id="skills" className="border-b-2 border-foreground bg-muted/30">
+    <section id="skills" className="border-b border-foreground bg-muted/20">
       <div className="section-container">
-        <div className="mb-12">
+        <div className="mb-10">
           <h2 className="section-title">What I Do</h2>
-          <p className="text-muted-foreground max-w-2xl text-base md:text-lg mt-4">
+          <p className="text-muted-foreground max-w-xl text-sm md:text-base mt-3">
             Expertise built through real projects, real challenges, and real results.
-            <span className="block text-sm mt-1 italic">
-              Keahlian yang dibangun melalui proyek nyata, tantangan nyata, dan hasil nyata.
-            </span>
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => {
             const IconComponent = skill.icon;
-            const accentClasses = {
-              primary: "bg-primary text-primary-foreground",
-              secondary: "bg-secondary text-secondary-foreground", 
-              accent: "bg-accent text-accent-foreground",
-            };
             
             return (
               <div 
                 key={index} 
                 className="brutal-card group flex flex-col h-full"
               >
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 border-2 border-foreground ${accentClasses[skill.accent as keyof typeof accentClasses]}`}>
-                  <IconComponent className="w-6 h-6" strokeWidth={2} />
+                <div className={`w-10 h-10 rounded-md flex items-center justify-center mb-3 border border-foreground ${accentStyles[skill.accent]}`}>
+                  <IconComponent className="w-5 h-5" strokeWidth={1.5} />
                 </div>
                 
-                <div className="mb-3">
-                  <h3 className="font-mono font-bold text-sm md:text-base uppercase tracking-wide text-foreground">
-                    {skill.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {skill.subtitle}
-                  </p>
-                </div>
+                <h3 className="font-mono font-medium text-sm mb-2 text-foreground">
+                  {skill.title}
+                </h3>
                 
-                <div className="flex-1">
-                  <p className="text-sm text-foreground/80 leading-relaxed mb-2">
-                    {skill.description}
-                  </p>
-                  <p className="text-xs text-muted-foreground italic leading-relaxed">
-                    {skill.descriptionId}
-                  </p>
-                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed flex-1">
+                  {skill.description}
+                </p>
               </div>
             );
           })}
         </div>
 
-        {/* Additional context */}
-        <div className="mt-12 pt-8 border-t-2 border-foreground/20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-4">
-              <span className="font-mono text-2xl md:text-3xl font-bold text-secondary">3+</span>
-              <p className="text-sm text-muted-foreground mt-1">Years Experience</p>
-              <p className="text-xs text-muted-foreground/70 italic">Tahun Pengalaman</p>
+        {/* Stats */}
+        <div className="mt-10 pt-8 border-t border-foreground/20">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <span className="font-mono text-2xl md:text-3xl font-semibold text-secondary">3+</span>
+              <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
             </div>
-            <div className="p-4">
-              <span className="font-mono text-2xl md:text-3xl font-bold text-primary">10+</span>
-              <p className="text-sm text-muted-foreground mt-1">Projects Delivered</p>
-              <p className="text-xs text-muted-foreground/70 italic">Proyek Diselesaikan</p>
+            <div>
+              <span className="font-mono text-2xl md:text-3xl font-semibold text-primary">10+</span>
+              <p className="text-xs text-muted-foreground mt-1">Projects Delivered</p>
             </div>
-            <div className="p-4">
-              <span className="font-mono text-2xl md:text-3xl font-bold text-accent">5+</span>
-              <p className="text-sm text-muted-foreground mt-1">Brands Managed</p>
-              <p className="text-xs text-muted-foreground/70 italic">Brand Dikelola</p>
+            <div>
+              <span className="font-mono text-2xl md:text-3xl font-semibold text-accent">5+</span>
+              <p className="text-xs text-muted-foreground mt-1">Brands Managed</p>
             </div>
           </div>
         </div>

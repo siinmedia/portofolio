@@ -1,63 +1,38 @@
 import { ExternalLink } from "lucide-react";
 
-const socialAccounts = [
-  {
-    platform: "TikTok",
-    handle: "@cahjepara.official",
-    url: "https://tiktok.com/@cahjepara.official",
-    color: "bg-secondary",
-  },
-  {
-    platform: "TikTok",
-    handle: "@estehibukota.official",
-    url: "https://tiktok.com/@estehibukota.official",
-    color: "bg-primary",
-  },
-  {
-    platform: "TikTok",
-    handle: "@kentang.gantenk",
-    url: "https://tiktok.com/@kentang.gantenk",
-    color: "bg-accent",
-  },
-  {
-    platform: "TikTok",
-    handle: "@rajasteak.official",
-    url: "https://tiktok.com/@rajasteak.official",
-    color: "bg-secondary",
-  },
-  {
-    platform: "TikTok",
-    handle: "@mybestea.official",
-    url: "https://tiktok.com/@mybestea.official",
-    color: "bg-olive",
-  },
+const accounts = [
+  { name: "@cahjepara.official", platform: "TikTok" },
+  { name: "@estehibukota.official", platform: "TikTok" },
+  { name: "@kentang.gantenk", platform: "TikTok" },
+  { name: "@rajasteak.official", platform: "TikTok" },
+  { name: "@mybestea.official", platform: "TikTok" },
 ];
 
 const SocialMediaSection = () => {
   return (
-    <section id="social-media" className="border-b-2 border-foreground">
+    <section id="social-media" className="border-b border-foreground">
       <div className="section-container">
-        <h2 className="section-title">Social Media yang Dikelola</h2>
-        
-        <div className="brutal-grid lg:grid-cols-5">
-          {socialAccounts.map((account, index) => (
-            <a
+        <div className="mb-10">
+          <h2 className="section-title">Social Media Managed</h2>
+          <p className="text-muted-foreground max-w-xl text-sm md:text-base mt-3">
+            Accounts I've grown and managed through organic content strategy.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {accounts.map((account, index) => (
+            <div
               key={index}
-              href={account.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="brutal-card group"
+              className="brutal-card flex items-center justify-between group"
             >
-              <div className="flex items-center justify-between mb-3">
-                <span className={`brutal-tag ${account.color} text-xs border-foreground`}>
-                  {account.platform}
-                </span>
-                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              <div>
+                <p className="font-mono text-sm font-medium group-hover:text-primary transition-colors">
+                  {account.name}
+                </p>
+                <p className="text-xs text-muted-foreground">{account.platform}</p>
               </div>
-              <p className="font-mono text-sm font-bold break-all">
-                {account.handle}
-              </p>
-            </a>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+            </div>
           ))}
         </div>
       </div>
