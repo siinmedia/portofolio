@@ -17,7 +17,7 @@ const experiences = [
           "Developing multi-role CRM for customer management",
           "IT support and maintenance",
         ],
-        brands: ["CRM System","Inventory Internal", "Content Planing"],
+        brands: ["CRM System", "Internal Inventory System", "Content Planning System"],
       },
       {
         role: "Social Media Marketing Specialist",
@@ -82,18 +82,16 @@ const ExperienceSection = () => {
                 {/* Company Header */}
                 <div className="flex items-center gap-3 mb-5 pb-4 border-b border-foreground/20">
                   <div
-                    className={`w-10 h-10 rounded-md flex items-center justify-center border border-foreground ${
-                      exp.type === "founder"
+                    className={`w-10 h-10 rounded-md flex items-center justify-center border border-foreground ${exp.type === "founder"
                         ? "bg-primary"
                         : "bg-secondary"
-                    }`}
+                      }`}
                   >
                     <IconComponent
-                      className={`w-5 h-5 ${
-                        exp.type === "founder"
+                      className={`w-5 h-5 ${exp.type === "founder"
                           ? "text-primary-foreground"
                           : "text-secondary-foreground"
-                      }`}
+                        }`}
                     />
                   </div>
                   <div>
@@ -115,15 +113,13 @@ const ExperienceSection = () => {
                       )}
 
                       <div
-                        className={`relative pl-7 ${
-                          posIndex < exp.positions.length - 1 ? "pb-6" : ""
-                        }`}
+                        className={`relative pl-7 ${posIndex < exp.positions.length - 1 ? "pb-6" : ""
+                          }`}
                       >
                         {/* Timeline Dot */}
                         <div
-                          className={`absolute left-0 top-1 w-5 h-5 rounded-full border border-foreground flex items-center justify-center ${
-                            position.current ? "bg-primary" : "bg-muted"
-                          }`}
+                          className={`absolute left-0 top-1 w-5 h-5 rounded-full border border-foreground flex items-center justify-center ${position.current ? "bg-primary" : "bg-muted"
+                            }`}
                         >
                           {position.current && (
                             <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full animate-pulse" />
@@ -173,7 +169,7 @@ const ExperienceSection = () => {
                           {position.brands.length > 0 && (
                             <div className="pt-3 border-t border-foreground/10">
                               <p className="font-mono text-xs text-muted-foreground mb-2">
-                                Brands:
+                                {position.role === "PHP Web Developer" ? "Systems:" : "Brands:"}
                               </p>
                               <div className="flex flex-wrap gap-1.5">
                                 {position.brands.map((brand, brandIndex) => (
