@@ -13,21 +13,21 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b-2 border-foreground">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-foreground">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <a href="#" className="font-mono font-bold text-lg">
+          <a href="#" className="font-mono font-semibold text-base">
             AAP<span className="text-primary">K</span>
           </a>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-0.5">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 font-mono text-sm uppercase tracking-wider hover:bg-muted transition-colors"
+                className="px-3 py-1.5 font-mono text-xs tracking-wide hover:bg-muted rounded-md transition-colors"
               >
                 {item.label}
               </a>
@@ -36,22 +36,22 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 border-2 border-foreground"
+            className="md:hidden p-2 border border-foreground rounded-md"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
         </div>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden border-t-2 border-foreground py-4">
+          <nav className="md:hidden border-t border-foreground py-3">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-3 font-mono text-sm uppercase tracking-wider hover:bg-muted transition-colors"
+                className="block px-3 py-2.5 font-mono text-sm tracking-wide hover:bg-muted rounded-md transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
