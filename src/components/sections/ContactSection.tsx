@@ -27,7 +27,7 @@ const ContactSection = () => {
               </a>
               <div className="flex items-center gap-2.5 text-secondary-foreground/80 text-sm">
                 <MapPin className="w-4 h-4" />
-                <span className="font-mono">Indonesia</span>
+                <span className="font-mono">Jepara, Indonesia</span>
               </div>
             </div>
           </div>
