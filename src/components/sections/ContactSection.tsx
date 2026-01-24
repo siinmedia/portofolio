@@ -19,11 +19,11 @@ const ContactSection = () => {
             
             <div className="space-y-3">
               <a
-                href="mailto:contact@anggeraji.com"
+                href="mailto:mail@anggeraji.web.id"
                 className="flex items-center gap-2.5 text-secondary-foreground hover:underline text-sm"
               >
                 <Mail className="w-4 h-4" />
-                <span className="font-mono">contact@anggeraji.com</span>
+                <span className="font-mono">mail@anggeraji.web.id</span>
               </a>
               <div className="flex items-center gap-2.5 text-secondary-foreground/80 text-sm">
                 <MapPin className="w-4 h-4" />
@@ -38,9 +38,9 @@ const ContactSection = () => {
             
             <div className="space-y-2">
               {[
-                { label: "LinkedIn", url: "#" },
-                { label: "GitHub", url: "#" },
-                { label: "Instagram", url: "#" },
+                { label: "LinkedIn", url: "https://www.linkedin.com/in/anggeraji/" },
+                { label: "GitHub", url: "https://github.com/siinmedia" },
+                { label: "Instagram", url: "instagram.com/anggerajipra" },
                 { label: "SIINMEDIA", url: "#" },
               ].map((link, index) => (
                 <a
