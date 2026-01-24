@@ -28,7 +28,7 @@ const experiences = [
           "Trend research and performance analytics",
           "Organic growth strategy execution",
         ],
-        brands: ["Esteh Ibukota", "Be Nice Coffee", "Kentang Ganteng", "Raja Steak", "MyBestea"],
+        brands: ["Be Nice Coffee", "Esteh Ibukota", "Kentang Ganteng", "Raja Steak", "MyBestea"],
       },
     ],
   },
