@@ -8,15 +8,14 @@ const AboutSection = () => {
           <div className="md:col-span-8">
             <div className="brutal-card">
               <p className="text-base leading-relaxed mb-4">
-                I'm a <strong>Digital Marketing Specialist</strong> with hands-on experience 
-                managing brands, building content strategies focused on organic growth, 
-                optimizing SEO, and developing websites and internal systems like 
-                landing pages and multi-role CRMs.
+                I'm a <strong>Web Developer with a strong background in Digital Marketing</strong>, 
+                experienced in building internal systems, landing pages, and role-based CRM solutions 
+                that support real business operations and growth.
               </p>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                I work in a structured, results-oriented way. Every project I take on 
-                is built with a solid foundation—not just to look good, 
-                but to actually work.
+                I work in a structured, results-oriented way. Every system and strategy I build 
+                is designed with a solid foundation — not just to look good, 
+                but to actually work and scale.
               </p>
             </div>
           </div>
@@ -29,7 +28,11 @@ const AboutSection = () => {
               <ul className="space-y-2 font-mono text-sm text-secondary-foreground">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
-                  Organic Growth
+                  Web Systems & Internal Tools
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
+                  Content Strategy & Planning
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
@@ -37,11 +40,7 @@ const AboutSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
-                  Content Strategy
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
-                  Web Systems
+                  Organic Growth
                 </li>
               </ul>
             </div>
