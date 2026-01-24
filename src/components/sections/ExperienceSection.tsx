@@ -48,7 +48,7 @@ const experiences = [
           "Graphic design",
           "Web development",
         ],
-        brands: [],
+        brands: ["Siin Booth","JEPARANESIA"],
       },
     ],
   },
