@@ -31,7 +31,7 @@ const HeroSection = () => {
             }`}
           >
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            Available for Projects
+            Available for Work
           </div>
           
           {/* Name */}
@@ -41,7 +41,7 @@ const HeroSection = () => {
             }`}
           >
             Angger Aji<br />
-            <span className="text-secondary">Prayogo Kusuma</span>
+            <span className="text-secondary">Kusuma</span>
           </h1>
           
           {/* Rotating Title */}
