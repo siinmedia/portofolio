@@ -56,7 +56,7 @@ const experiences = [
           "Graphic & Visual Design",
           "Web Development & System Integration",
         ],
-        brands: ["Siin Booth", "JEPARANESIA"],
+        brands: ["Siin Booth", "JEPARANESIA", "QrisKu", "TernoAE"],
       },
     ],
   },
