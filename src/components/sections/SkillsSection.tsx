@@ -107,7 +107,7 @@ const SkillsSection = () => {
               <p className="text-xs text-muted-foreground mt-1">Client Projects</p>
             </div>
             <div>
-              <span className="font-mono text-2xl md:text-3xl font-semibold text-accent">5+</span>
+              <span className="font-mono text-2xl md:text-3xl font-semibold text-accent">8+</span>
               <p className="text-xs text-muted-foreground mt-1">Brands & Teams</p>
             </div>
           </div>
