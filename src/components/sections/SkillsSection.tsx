@@ -3,49 +3,49 @@ import { TrendingUp, Users, FileText, Search, Palette, Code, Link, Wrench } from
 const skills = [
   {
     title: "Digital Strategy",
-    description: "Data-driven campaigns that move the needle. From planning to execution, everything measured.",
+    description: "Growth-focused strategies shaped by data, experience, and real business constraints.",
     icon: TrendingUp,
     accent: "secondary" as const,
   },
   {
     title: "Social Media Growth",
-    description: "Organic reach, real engagement, genuine brand awareness. Smart content strategy, no shortcuts.",
+    description: "Building sustainable reach and engagement through thoughtful content and consistent execution.",
     icon: Users,
     accent: "primary" as const,
   },
   {
     title: "Content & Copy",
-    description: "Words that convert. Content calendars that work. Research-backed, trend-aware writing.",
+    description: "Clear, intentional content and copy designed to communicate value and drive action.",
     icon: FileText,
     accent: "accent" as const,
   },
   {
     title: "SEO Optimization",
-    description: "Technical SEO, on-page optimization, content strategy for organic ranking.",
+    description: "Search strategies combining technical SEO, content structure, and long-term visibility.",
     icon: Search,
     accent: "secondary" as const,
   },
   {
     title: "Visual Design",
-    description: "Brand-consistent graphics, social assets, promotional materials that serve the message.",
+    description: "Purpose-driven visual design that reinforces brand identity and supports communication.",
     icon: Palette,
     accent: "primary" as const,
   },
   {
     title: "Web Development",
-    description: "PHP, landing pages, custom CRM systems. Built for real business needs.",
+    description: "Business-oriented web solutions, from landing pages to custom internal systems.",
     icon: Code,
     accent: "accent" as const,
   },
   {
     title: "System Integration",
-    description: "Connecting tools and platforms for streamlined workflows across your business.",
+    description: "Connecting tools and platforms to create efficient, scalable business workflows.",
     icon: Link,
     accent: "secondary" as const,
   },
   {
     title: "Technical Support",
-    description: "Day-to-day troubleshooting, maintenance, keeping things running smoothly.",
+    description: "Ongoing technical support to ensure systems stay reliable, secure, and operational.",
     icon: Wrench,
     accent: "primary" as const,
   },
@@ -54,7 +54,7 @@ const skills = [
 const SkillsSection = () => {
   const accentStyles = {
     primary: "bg-primary text-primary-foreground",
-    secondary: "bg-secondary text-secondary-foreground", 
+    secondary: "bg-secondary text-secondary-foreground",
     accent: "bg-accent text-accent-foreground",
   };
 
@@ -64,27 +64,29 @@ const SkillsSection = () => {
         <div className="mb-10">
           <h2 className="section-title">What I Do</h2>
           <p className="text-muted-foreground max-w-xl text-sm md:text-base mt-3">
-            Expertise built through real projects, real challenges, and real results.
+            I work at the intersection of strategy, execution, and systems — personally and as a team.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => {
             const IconComponent = skill.icon;
-            
+
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="brutal-card group flex flex-col h-full"
               >
-                <div className={`w-10 h-10 rounded-md flex items-center justify-center mb-3 border border-foreground ${accentStyles[skill.accent]}`}>
+                <div
+                  className={`w-10 h-10 rounded-md flex items-center justify-center mb-3 border border-foreground ${accentStyles[skill.accent]}`}
+                >
                   <IconComponent className="w-5 h-5" strokeWidth={1.5} />
                 </div>
-                
+
                 <h3 className="font-mono font-medium text-sm mb-2 text-foreground">
                   {skill.title}
                 </h3>
-                
+
                 <p className="text-xs text-muted-foreground leading-relaxed flex-1">
                   {skill.description}
                 </p>
@@ -102,11 +104,11 @@ const SkillsSection = () => {
             </div>
             <div>
               <span className="font-mono text-2xl md:text-3xl font-semibold text-primary">10+</span>
-              <p className="text-xs text-muted-foreground mt-1">Projects Delivered</p>
+              <p className="text-xs text-muted-foreground mt-1">Client Projects</p>
             </div>
             <div>
               <span className="font-mono text-2xl md:text-3xl font-semibold text-accent">5+</span>
-              <p className="text-xs text-muted-foreground mt-1">Brands Managed</p>
+              <p className="text-xs text-muted-foreground mt-1">Brands & Teams</p>
             </div>
           </div>
         </div>
