@@ -58,13 +58,15 @@ const PortfolioSection = () => {
                       <Star className="w-3 h-3 fill-primary" /> New Project
                     </span>
                   )}
-                  <h3 className={`font-mono font-bold text-base transition-colors ${
-                    item.featured 
-                    ? "bg-primary text-black px-2 py-0.5 w-fit border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]" 
-                    : "group-hover:text-primary"
-                  }`}>
-                    {item.title}
-                  </h3>
+                    <h3
+                      className={`font-mono font-bold text-base transition-colors ${
+                        item.featured
+                          ? "bg-primary text-black px-2 py-0.5 w-fit border border-black rounded shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
+                          : "group-hover:text-primary"
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
                 </div>
                 <ExternalLink className={`w-4 h-4 transition-colors ${
                   item.featured ? "text-primary" : "text-muted-foreground group-hover:text-primary"
