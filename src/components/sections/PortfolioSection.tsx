@@ -9,6 +9,13 @@ const portfolioItems = [
     tags: ["Cloudflare Workers", "KV Database", "Payment"],
     featured: true, // Kita tambahkan flag ini
   },
+    {
+    title: "Content Planning System",
+    description:
+      "Internal content planning dashboard to manage content ideas, schedules, platforms, and campaign workflows for marketing teams.",
+    url: "https://demo.siindev.web.id",
+    tags: ["Content Planning", "Dashboard", "Internal System"],
+  },
   {
     title: "TernoAE",
     description: "Local ride-hailing platform with real-time booking and tracking system.",
@@ -21,13 +28,7 @@ const portfolioItems = [
     url: "https://qrisku.siindev.web.id",
     tags: ["Payment", "Fintech", "QRIS"],
   },
-  {
-    title: "Content Planning System",
-    description:
-      "Internal content planning dashboard to manage content ideas, schedules, platforms, and campaign workflows for marketing teams.",
-    url: "https://demo.siindev.web.id",
-    tags: ["Content Planning", "Dashboard", "Internal System"],
-  },
+
 ];
 
 const PortfolioSection = () => {
