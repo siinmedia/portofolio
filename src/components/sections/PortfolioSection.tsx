@@ -4,8 +4,8 @@ const portfolioItems = [
   {
     title: "Dynamic Invoice QRIS",
     description:
-      "AA free, secure, and open-source dynamic QRIS payment invoice system that is practical and professional. Built on Cloudflare Workers for high performance, it leverages KV Storage for ultra-fast invoice retrieval.",
-    url: "https://inv.siindev.web.id/admin",
+      "AA free, secure, and open-source dynamic QRIS payment invoice system that is practical and professional. Built on Cloudflare Workers for high performance.",
+    url: "https://pay.siindev.web.id/admin",
     tags: ["Cloudflare Workers", "KV Database", "Payment"],
     featured: true, // Kita tambahkan flag ini
   },
