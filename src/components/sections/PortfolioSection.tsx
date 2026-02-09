@@ -46,7 +46,7 @@ const PortfolioSection = () => {
               // Modifikasi class pembungkus: Jika featured, beri background & shadow lebih kuat
               className={`brutal-card group block transition-all ${
                 item.featured 
-                ? "bg-primary/10 border-2 border-primary shadow-[4px_4px_0px_0px_rgba(var(--primary),1)]" 
+                ? "bg-primary/10 border-2 border-primary shadow-[2px_2px_0px_0px_rgba(var(--primary),1)]" 
                 : ""
               }`}
             >
@@ -60,7 +60,7 @@ const PortfolioSection = () => {
                   )}
                   <h3 className={`font-mono font-bold text-base transition-colors ${
                     item.featured 
-                    ? "bg-primary text-black px-2 py-0.5 w-fit border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" 
+                    ? "bg-primary text-black px-2 py-0.5 w-fit border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]" 
                     : "group-hover:text-primary"
                   }`}>
                     {item.title}
