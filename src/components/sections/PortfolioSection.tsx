@@ -2,6 +2,13 @@ import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
   {
+    title: "Dynamic Invoice QRIS",
+    description:
+      "A high-performance dynamic QRIS payment link generator built on Cloudflare Workers. It uses KV Storage for ultra-fast invoice data retrieval and real-time transaction management.",
+    url: "https://inv.siindev.web.id/admin",
+    tags: ["Cloudflare Workers", "KV Database", "Payment", "Edge Computing"],
+  },
+  {
     title: "TernoAE",
     description: "Local ride-hailing platform with real-time booking and tracking system.",
     url: "https://ternoae.web.id",
