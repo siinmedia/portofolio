@@ -99,7 +99,7 @@ const ExperienceSection = () => {
                       {exp.company}
                     </h3>
                     <p className="text-xs text-muted-foreground">
-                      {exp.type === "founder" ? "Personal Venture" : "Full-time"}
+                      {exp.type === "founder" ? "Personal Project" : "Full-time"}
                     </p>
                   </div>
                 </div>
