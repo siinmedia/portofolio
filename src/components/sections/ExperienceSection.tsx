@@ -46,15 +46,15 @@ const experiences = [
     icon: Rocket,
     positions: [
       {
-        role: "Founder",
+        role: "Developer & Digital Marketing",
         period: "Ongoing",
         current: true,
         tasks: [
-          "Social Media & Digital Strategy",
-          "SEO & Website Optimization",
-          "Content Planning & Copywriting",
-          "Graphic & Visual Design",
-          "Web Development & System Integration",
+          "Developing websites and internal digital systems",
+          "Managing social media strategy and digital campaigns",
+          "SEO optimization and website performance improvement",
+          "Content planning and digital brand development",
+          "Designing visual assets and marketing materials",
         ],
         brands: ["Siin Booth", "JEPARANESIA", "QrisKu", "TernoAE"],
       },
