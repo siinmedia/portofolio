@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
+import QrisApi from "@/components/sections/QrisApi";
 import VisualWorksSection from "@/components/sections/VisualWorksSection";
 import SocialMediaSection from "@/components/sections/SocialMediaSection";
 import EducationSection from "@/components/sections/EducationSection";
@@ -22,6 +23,7 @@ const Index = () => {
         <SkillsSection />
         <ExperienceSection />
         <PortfolioSection />
+        <QrisApi />
         <VisualWorksSection />
         <SocialMediaSection />
         <EducationSection />
