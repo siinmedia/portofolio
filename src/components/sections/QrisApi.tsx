@@ -51,7 +51,8 @@ const QrisApiSection = () => {
   };
 
   return (
-    <section id="qris-api" className="border-b border-foreground pb-12 pt-12">
+    // Pastikan section-container menangani max-width dengan baik
+    <section id="qris-api" className="border-b border-foreground pb-12 pt-12 overflow-hidden">
       <div className="section-container">
         {/* Section Header */}
         <div className="mb-10">
@@ -64,7 +65,8 @@ const QrisApiSection = () => {
             strings into dynamic ones by calculating the CRC16 checksum on the edge. 
             Designed for POS systems and Telegram/WhatsApp Bots.
           </p>
-          <div className="flex gap-2 mt-4">
+          {/* DITAMBAHKAN flex-wrap agar badge tidak melebar di HP */}
+          <div className="flex flex-wrap gap-2 mt-4">
             <span className="brutal-tag text-xs bg-foreground text-background">Cloudflare Workers</span>
             <span className="brutal-tag text-xs bg-foreground text-background">Serverless</span>
             <span className="brutal-tag text-xs bg-foreground text-background">JavaScript</span>
@@ -75,24 +77,27 @@ const QrisApiSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           
           {/* Left Column: Documentation */}
-          <div className="flex flex-col space-y-6">
-            <div className="brutal-card p-6 h-full">
+          {/* DITAMBAHKAN min-w-0 agar anak elemennya tidak memaksa grid melebar */}
+          <div className="flex flex-col space-y-6 min-w-0">
+            {/* DITAMBAHKAN overflow-hidden dan menyesuaikan padding untuk mobile (p-4 md:p-6) */}
+            <div className="brutal-card p-4 md:p-6 h-full overflow-hidden w-full">
               <div className="flex items-center gap-2 mb-4 border-b border-foreground/20 pb-3">
-                <Terminal className="w-5 h-5" />
-                <h3 className="font-mono font-bold text-lg">API Documentation</h3>
+                <Terminal className="w-5 h-5 flex-shrink-0" />
+                <h3 className="font-mono font-bold text-lg truncate">API Documentation</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-full">
                 <div>
                   <p className="text-xs text-muted-foreground font-mono mb-1">Endpoint</p>
-                  <code className="text-sm bg-muted/50 p-1.5 px-3 rounded-md border border-foreground/20 block font-mono">
+                  {/* DITAMBAHKAN overflow-x-auto dan whitespace-nowrap agar URL panjang bisa di-scroll dan tidak merusak layout */}
+                  <code className="text-sm bg-muted/50 p-1.5 px-3 rounded-md border border-foreground/20 block font-mono overflow-x-auto whitespace-nowrap">
                     POST https://anggeraji.web.id/qris/api
                   </code>
                 </div>
 
                 <div>
                   <p className="text-xs text-muted-foreground font-mono mb-1">Request Body (JSON)</p>
-                  <pre className="text-xs bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-md overflow-x-auto font-mono">
+                  <pre className="text-xs bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-md overflow-x-auto font-mono max-w-full">
 {`{
   "qris_statis": "000201010211...6304163E",
   "amount": "50000"
@@ -102,11 +107,11 @@ const QrisApiSection = () => {
 
                 <div>
                   <p className="text-xs text-muted-foreground font-mono mb-1">Success Response</p>
-                  <pre className="text-xs bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-md overflow-x-auto font-mono border-l-4 border-green-500">
+                  <pre className="text-xs bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-md overflow-x-auto font-mono border-l-4 border-green-500 max-w-full">
 {`{
   "status": "success",
-  "message": "QRIS berhasil dihasilkan",
-  "qris_string": "000201010212...540550000...<CRC16>"
+  "message": "QRIS berhasil",
+  "qris_string": "00020101...<CRC16>"
 }`}
                   </pre>
                 </div>
@@ -115,8 +120,9 @@ const QrisApiSection = () => {
           </div>
 
           {/* Right Column: Live Demo */}
-          <div className="flex flex-col">
-            <div className="brutal-card p-6 flex flex-col items-center justify-center min-h-[400px] bg-muted/10 relative overflow-hidden">
+          <div className="flex flex-col min-w-0">
+            {/* DITAMBAHKAN overflow-hidden dan penyesuaian padding mobile */}
+            <div className="brutal-card p-4 md:p-6 flex flex-col items-center justify-center min-h-[400px] bg-muted/10 relative overflow-hidden w-full">
               <h3 className="font-mono font-bold text-lg mb-2 w-full text-left">Live Demo</h3>
               <p className="text-sm text-muted-foreground mb-6 w-full text-left">
                 Try it out! Enter an amount and the API will generate a scannable dynamic QR code for <strong className="text-foreground">SIINMEDIA</strong>.
@@ -147,20 +153,20 @@ const QrisApiSection = () => {
               </form>
 
               {error && (
-                <div className="w-full max-w-xs flex items-center gap-2 text-red-500 text-sm mb-4 bg-red-500/10 p-2 rounded border border-red-500/20">
-                  <AlertCircle className="w-4 h-4" />
-                  <p>{error}</p>
+                <div className="w-full max-w-xs flex items-start md:items-center gap-2 text-red-500 text-sm mb-4 bg-red-500/10 p-2 rounded border border-red-500/20">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 md:mt-0" />
+                  <p className="break-words">{error}</p>
                 </div>
               )}
 
               {/* QR Image Placeholder / Result */}
-              <div className="w-[200px] h-[200px] border-2 border-foreground border-dashed rounded-xl flex items-center justify-center bg-background relative">
+              <div className="w-[200px] h-[200px] border-2 border-foreground border-dashed rounded-xl flex items-center justify-center bg-background relative flex-shrink-0">
                 {qrUrl ? (
-                  <div className="relative group p-2 bg-white rounded-lg">
+                  <div className="relative group p-2 bg-white rounded-lg w-full h-full">
                     <img 
                       src={qrUrl} 
                       alt="Dynamic QRIS Result" 
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain rounded-md"
                     />
                     <div className="absolute -top-3 -right-3 bg-green-500 text-white rounded-full p-1 border-2 border-background">
                       <CheckCircle2 className="w-5 h-5" />
@@ -172,7 +178,7 @@ const QrisApiSection = () => {
               </div>
               
               {qrUrl && (
-                <p className="text-xs text-muted-foreground mt-4 font-mono">
+                <p className="text-xs text-muted-foreground mt-4 font-mono text-center">
                   Scan to test (Official SIINMEDIA QRIS)
                 </p>
               )}
